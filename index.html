@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños Amor!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div id="ui">
+            <div>🏖️ Nivel: <span id="level">1</span></div>
+            <div>💖 Corazones: <span id="hearts">0</span>/3</div>
+            <div>❤️ Vidas: <span id="lives">3</span></div>
+        </div>
+        <div id="instructions">
+            <div>🏃‍♂️ FLECHAS ← → para correr | ↑ para saltar olas</div>
+            <div>🌊 Esquiva las olas saltando! Juntá los corazones!</div>
+        </div>
+        <div id="winMessage">
+            <div class="pixel-heart">💖</div>
+            <h2>FELIZ CUMPLEAÑOS BEBY!</h2>
+            <div style="font-size: 50px; margin: 20px 0;">🏃‍♂️💕👩‍💼🐕</div>
+            <p>Atravesaste todas las olas para llegar hasta nosotros!</p>
+            <div style="font-size: 32px; margin: 25px 0; color: #ff1493;">TE AMO CON TODO MI SER❤️</div>
+            <p style="font-size: 28px;">TE AMAMOS 🎂🎉</p>
+            <div style="font-size: 16px; margin-top: 20px; opacity: 0.9;">Con amor, tu babygirl💕</div>
+        </div>
+        <div id="loseMessage">
+        <h2>Intentá de vuelta!</h2>
+        <p>🏄‍♂️ No te rindas chiquito</p>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

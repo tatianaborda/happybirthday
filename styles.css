@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #4a90e2 0%, #7b68ee 100%);
+    font-family: 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+#gameContainer {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    border: 4px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    background: #87CEEB;
+}
+
+canvas {
+    display: block;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+#ui {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    background: rgba(255,255,255,0.9);
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+#instructions {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #333;
+    background: rgba(255,255,255,0.9);
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+#winMessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(45deg, #ff6b9d, #ffd93d, #6bcf7f, #4d9de0);
+    background-size: 400% 400%;
+    animation: gradientShift 2s ease infinite;
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    box-shadow: 0 0 40px rgba(255,255,255,0.4);
+    display: none;
+    z-index: 20;
+    border: 4px solid #333;
+}
+#loseMessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    padding: 30px;
+    border-radius: 16px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    display: none;
+    z-index: 20;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.pixel-heart {
+    font-size: 30px;
+    animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
